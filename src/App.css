@@ -1,38 +1,136 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-color: #3498db;
+  transition: background-color 0.5s ease-out;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+
+.App:hover {
+  background-color: #9b59b6;
+}
+
+.link--shortener_input {
+  display: flex;
+  align-items: center;
+  padding: 30px 30px 15px 30px;
+}
+
+input.userInput {
+  width: 400px;
+  /* padding: 15px; */
+  margin-right: 20px;
+  /* border-radius: 10px; */
+  /* border: none; */
+  /* border-style: none; */
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus.userInput {
+  outline: none;
+  border-color: #6bb9f0;
+  box-shadow: 0 0 5px rgba(107, 185, 240, 0.5);
+}
+
+.link--shortener_input button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.link--shortener_input button:hover {
+  background-color: #0062cc;
+}
+
+.link--shortener_output {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+input.userOutput {
+  width: 200px;
+  /* padding: 5px 10px 10px 10px; */
+  margin-right: 20px;
+  /* border-radius: 10px; */
+  /* border: none; */
+  /* border-style: none; */
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus.userOutput {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px #4a90e2;
+}
+
+.link--shortener_output button {
+  background-color: #36D1DC;
+  background-image: linear-gradient(to top, #5B86E5 0%, #36D1DC 100%);
+  border: none;
   color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.link--shortener_output button:hover {
+  background-color: #5B86E5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 450px) {
+  .link--shortener_input {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .link--shortener_input input {
+    width: 250px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .link--shortener_input button {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .link--shortener_output {
+    padding: 10px;
+  }
+
+  .link--shortener_output input {
+    width: 200px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .link--shortener_output button {
+    padding: 10px;
+    font-size: 12px;
   }
 }
